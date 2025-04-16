@@ -41,14 +41,8 @@ This tool was built as part of the CDAP integration assignment by **Upasana Sing
 
 ---
 
-### 1️⃣ Run ClickHouse via Docker
 
-```bash
-docker run -d --name clickhouse-server -p 8123:8123 -p 9000:9000 \
--e CLICKHOUSE_DEFAULT_PASSWORD=admin123 \
-clickhouse/clickhouse-server
-
-### 2️⃣ Build & Run Spring Boot App
+### Build & Run Spring Boot App
 
 # Open project root (where pom.xml is)
 cd ingestiontool
@@ -59,7 +53,7 @@ mvn clean install
 # Run the app
 mvn spring-boot:run
 
-### 3️⃣ Access App
+### Access App
  http://localhost:8080
 
 🔄 How to Use
@@ -100,5 +94,15 @@ Download link shown for uploaded file
 ⚠️ Assumes uploaded CSV headers match target table schema
 
 🧩 (Bonus not implemented): Multi-table joins, progress bar, data type mismatch resolution
+
+
+### Run ClickHouse via Docker
+
+```bash
+docker run -d --name clickhouse-server -p 8123:8123 -p 9000:9000 \
+-e CLICKHOUSE_DEFAULT_PASSWORD=admin123 \
+clickhouse/clickhouse-server
+---
+
 
 
