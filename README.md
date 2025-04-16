@@ -2,8 +2,6 @@
 
 A web-based Spring Boot application to move data between **ClickHouse** and **Flat Files (CSV)** with support for uploading, exporting, previewing, and schema discovery.
 
-This tool was built as part of the CDAP integration assignment by **Upasana Singh**, April 2025.
-
 ---
 
 ## 🚀 Features
