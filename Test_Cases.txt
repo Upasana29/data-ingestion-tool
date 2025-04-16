@@ -1,0 +1,62 @@
+============================
+TEST CASES: DATA INGESTION TOOL
+============================
+Test Case 1: ClickHouse Connection - Valid Credentials
+---------------------------------------------------------
+What tested:
+Connected to ClickHouse using correct host, port, database, user, and JWT token.
+
+Expected result:
+Should show a success message and list available tables.
+
+Actual result:
+Connected successfully to ClickHouse.
+Displayed tables in database 'default'.
+------------------------------------------------------------------------------------------------------------------
+Test Case 2: ClickHouse Connection - Invalid JWT Token
+---------------------------------------------------------
+What tested:
+Entered an incorrect JWT token when trying to connect to ClickHouse.
+
+Expected result:
+Should show an authentication error.
+
+Actual result:
+Failed to connect: Authentication failed. (REQUIRED_PASSWORD)
+------------------------------------------------------------------------------------------------------------------
+Test Case 3: Flat File Upload and Preview
+-------------------------------------------
+What tested:
+Uploaded a valid CSV file (sample_users.csv) and previewed the first 5 rows.
+
+Expected result:
+The file should be saved in /uploads, and a preview of top 5 rows should appear.
+
+Actual result:
+Preview loaded successfully.
+CSV headers and rows displayed in a table.
+"Confirm Insert" button shown.
+------------------------------------------------------------------------------------------------------------------
+Test Case 4: Confirm Insert - Flat File → ClickHouse
+-------------------------------------------------------
+What tested:
+Clicked "Confirm Insert" after previewing CSV file.
+
+Expected result:
+Rows should be inserted into selected ClickHouse table, with a success message.
+
+Actual result:
+Inserted 4 records into test_users.
+------------------------------------------------------------------------------------------------------------------
+Test Case 5: Re-upload Same File Without Truncating Table
+------------------------------------------------------------
+What tested:
+Uploaded the same CSV file again and clicked "Confirm Insert" without truncating the table.
+
+Expected result:
+Records would be duplicated if no deduplication is implemented.
+
+Actual result:
+Duplicates were inserted (same records appeared multiple times in output.csv).
+Duplicate prevention not yet implemented.
+------------------------------------------------------------------------------------------------------------------------
