@@ -1,0 +1,33 @@
+=========================================
+PROMPT HISTORY - DATA INGESTION TOOL
+Author: Upasana Singh
+Date: April 2025
+Assignment: CDAP Integration Project
+=========================================
+
+Below are key prompts used during the development of my project with AI assistance (ChatGPT):
+
+---
+
+1. What is ClickHouse and how can I connect to it using Java?
+→ Helped me understand the database, JDBC setup, and how to connect via Spring Boot.
+
+2. I faced several issues while setting up Docker and working with Java/Spring Boot files — how can I resolve common errors?
+→ Got support for resolving environment issues, dependency-related errors, IDE configuration problems, and Docker connection troubleshooting.
+
+3. How can I preview the first 5 rows of an uploaded CSV file before inserting?
+→ Received a step-by-step explanation and code to read, preview, and store uploaded files using OpenCSV.
+
+4. Why am I getting duplicate records when uploading the same CSV multiple times?
+→ Learned about the lack of truncate/deduplication logic and how to prevent duplicates before inserting.
+
+
+---
+
+These prompts were used to:
+- Resolve setup and runtime issues in Docker and Java
+- Build interactive features like preview, selection, and file upload
+- Improve the final documentation for submission
+
+
+
